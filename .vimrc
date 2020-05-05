@@ -16,12 +16,38 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ibab/vim-snakemake'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Turn on syntax highlighting.
 syntax on
+
+"ctrlp key maps
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" set theme
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+" Faster update time (default is 4000 or 4 seconds) mainly used for
+" Git Gutter
+set updatetime=250
+let g:gitgutter_max_signs = 500
+" No mapping
+let g:gitgutter_map_keys = 0
+" Colors
+let g:gitgutter_override_sign_column_highlight = 0
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=4
 
 " Disable the default Vim startup message.
 set shortmess+=I
