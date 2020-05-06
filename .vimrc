@@ -19,6 +19,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ibab/vim-snakemake'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tomtom/tcomment_vim'
+" Plugin 'valloric/youcompleteme'
+Plugin 'ervandew/supertab'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -113,3 +119,9 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" map the damn :Q command to :q
+:cmap Q q
+:cmap Q! q!  
+:cmap WQ wq
+:cmap W w
